@@ -8,14 +8,17 @@ for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', function () {
         screen.value += buttons[i].value;
     });
+    
 }
+
+equals.addEventListener('click', function () {
+    screen.value;
+    console.log (typeof screen.value)
+});
+
 
 clear.addEventListener('click', function () {
     screen.value = clear.value; 
-});
-
-equals.addEventListener('click', function () {
-    screen.value = "show answer...";
 });
 
 const firstVal = document.getElementById('firstVal');
@@ -25,12 +28,20 @@ const simEq = document.getElementById('simEq');
 const simRes = document.getElementById('simRes');
 
 simEq.addEventListener('click', function () {
-    Number(firstVal.value);
-    Number(secondVal.value);
     for (let i = 0; i < 1; i++) {
-        simRes.value += Number(firstVal.value) + simOp.value[i] + Number(secondVal.value);
-        
-        // console.log(typeof firstVal.value)
+        if (simOp.value == '+') {
+            simRes.value = ' ';
+            simRes.value += Number(firstVal.value) + Number(secondVal.value);    
+        } else if (simOp.value == '-') {
+            simRes.value = ' ';
+            simRes.value += Number(firstVal.value) - Number(secondVal.value);
+        } else if (simOp.value == '*') {
+            simRes.value = ' ';
+            simRes.value += Number(firstVal.value) * Number(secondVal.value);
+        } else {
+            simRes.value = ' ';
+            simRes.value += Number(firstVal.value) / Number(secondVal.value);
+        } 
+    
     }
-    console.log(typeof firstVal.value);
 });
