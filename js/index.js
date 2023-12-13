@@ -15,5 +15,22 @@ clear.addEventListener('click', function () {
 });
 
 equals.addEventListener('click', function () {
-    screen.value = "show answer..."
+    screen.value = "show answer...";
+});
+
+const firstVal = document.getElementById('firstVal');
+const secondVal = document.getElementById('secondVal');
+const simOp = document.getElementById('simOp');
+const simEq = document.getElementById('simEq');
+const simRes = document.getElementById('simRes');
+
+simEq.addEventListener('click', function () {
+    Number(firstVal.value);
+    Number(secondVal.value);
+    for (let i = 0; i < 1; i++) {
+        simRes.value += Number(firstVal.value) + simOp.value[i] + Number(secondVal.value);
+        
+        // console.log(typeof firstVal.value)
+    }
+    console.log(typeof firstVal.value);
 });
