@@ -6,6 +6,7 @@ const equals = document.getElementById("equals");
 
 for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', function () {
+        // screen.value = " ";
         screen.value += buttons[i].value;
     });
     
@@ -13,7 +14,17 @@ for (let i = 0; i < buttons.length; i++) {
 
 equals.addEventListener('click', function () {
     screen.value;
-    console.log (typeof screen.value)
+    if (screen.value.includes('+')) {
+        screen.value = Number(screen.value.split('+')[0]) + Number(screen.value.split('+')[1]);
+    } else if (screen.value.includes('-')) {
+        screen.value = Number(screen.value.split('-')[0]) - Number(screen.value.split('-')[1]);
+    } else if (screen.value.includes('x')) {
+        screen.value = Number(screen.value.split('x')[0]) * Number(screen.value.split('x')[1]);
+    } else {
+        screen.value = Number(screen.value.split('/')[0]) / Number(screen.value.split('/')[1]);
+    }
+    // Negative numbers and parenthesis causes the value to be a NaN
+    console.log(screen.value);
 });
 
 
@@ -45,3 +56,9 @@ simEq.addEventListener('click', function () {
     
     }
 });
+
+// formula for rps
+
+// let a = Math.random()*(3-1);
+// let b = Math.round(a);
+// console.log(b);
