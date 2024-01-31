@@ -13,7 +13,11 @@ for (let i = 0; i < buttons.length; i++) {
 }
 
 equals.addEventListener('click', function () {
-    screen.value;
+    // console.log(Math.evaluate(screen.value));
+    // const array = [];
+    // array.push(screen.value);
+    // console.log(array);
+
     if (screen.value.includes('+')) {
         screen.value = Number(screen.value.split('+')[0]) + Number(screen.value.split('+')[1]);
     } else if (screen.value.includes('-')) {
@@ -57,8 +61,3 @@ simEq.addEventListener('click', function () {
     }
 });
 
-// formula for rps
-
-// let a = Math.random()*(3-1);
-// let b = Math.round(a);
-// console.log(b);

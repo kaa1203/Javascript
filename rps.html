@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="stage">Stage 1</h1>
+            <div class="avatar-wrapper">
+                <div class="player">
+                    <progress id="playerHp" value="100" max="100"></progress>
+                    <div class="player-character"></div>
+                </div>
+                <div class="npc">
+                    <progress id="npcHp" value="100" max="100"></progress>
+                    <div class="npc-character"></div>
+                </div>
+            </div>
+            <div class="rps-ui">
+                <div class="rps-status">
+                    <div class="rps-status-user"></div>
+                    <div class="rps-status-npc"></div>
+                </div>
+                <div class="skills-wrapper">
+                    <button class="skill" value="0">Rock</button>
+                    <button class="skill" value="1">Paper</button>
+                    <button class="skill" value="2">Scissor</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/rps.js"></script>
+</body>
+</html>

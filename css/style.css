@@ -2,6 +2,10 @@ body {
     font-size: 20px;
 }
 
+.is-hidden {
+    display: none;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -75,4 +79,70 @@ body {
 .simple-calc-wrapper {
     display: flex;
     gap: 20px;
+}
+
+.section {
+    background: url(https://fakeimg.pl/500x500?text=Kewl_BG) no-repeat center/cover;
+}
+
+.section .container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.avatar-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.player,
+.npc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.player-character {
+    background: url(../images/stickman-1.png);
+    width: 300px;
+    height: 500px;
+}
+
+.npc-character {
+    background: url(../images/stickman-2.png);
+    width: 300px;
+    height: 500px;
+}
+
+progress[value] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+}
+
+.rps-ui {
+    width: 100%;
+}
+
+.skills-wrapper {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.skill {
+    display: flex;
+    justify-content: center;
+    border-radius: 4px;
+    cursor: pointer;
+    width: calc(100% / 3 - 20px);
+    padding: 20px;
+    background: whitesmoke;
+}
+
+.skill:hover {
+    box-shadow: 1px 9px 10px 4px grey;
 }

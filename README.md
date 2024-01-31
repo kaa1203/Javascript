@@ -1,6 +1,4 @@
-# Javascript
-
-## A compilation of my js codes...
+# A compilation of my js codes...
 
 ---
 
